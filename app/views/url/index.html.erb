@@ -1,0 +1,16 @@
+<%= form_for(@url, :url => url_create_path) do |f| %>
+
+<p>
+  <%= f.label :short_url %><br>
+  <%= f.text_field :short_url %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
+
+<% @urls.each do |url| %>
+  <p><a href="http://localhost:3000/show/<%=url.id%>">http://localhost:3000/show/<%=url.id%></a></p>
+<% end %>
